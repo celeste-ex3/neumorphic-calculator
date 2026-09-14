@@ -190,6 +190,13 @@ body {
   gap: clamp(8px, 2.6vw, 14px);
 }
 
+.key-icon {
+  width: clamp(20px, 5vw, 26px);
+  height: clamp(20px, 5vw, 26px);
+  display: block;
+  pointer-events: none;
+}
+
 .key {
   display: grid;
   place-items: center;
