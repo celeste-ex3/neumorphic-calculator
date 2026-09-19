@@ -40,6 +40,12 @@
   }
 
   function render(historyText) {
+    // Trigger animation by removing and re-adding animation class
+    displayCurrent.style.animation = 'none';
+    setTimeout(() => {
+      displayCurrent.style.animation = '';
+    }, 10);
+    
     displayCurrent.textContent = current;
 
     if (historyText !== undefined) {
@@ -282,16 +288,28 @@
     }
   });
 
+  const THEMES = ["light", "dark", "premium"];
+  const THEME_COLORS = {
+    light: "#e8ebf0",
+    dark: "#1a1d24",
+    premium: "#2a1a3d"
+  };
+  const THEME_LABELS = {
+    light: "Light theme active - Click to switch to dark",
+    dark: "Dark theme active - Click to switch to premium",
+    premium: "Premium theme active - Click to switch to light"
+  };
+
   function setTheme(theme) {
+    if (!THEMES.includes(theme)) theme = "light";
+    
     document.documentElement.setAttribute("data-theme", theme);
-    const isDark = theme === "dark";
-    themeToggle.setAttribute("aria-pressed", String(isDark));
-    themeToggle.setAttribute(
-      "aria-label",
-      isDark ? "Switch to light theme" : "Switch to dark theme",
-    );
-    if (metaThemeColor)
-      metaThemeColor.setAttribute("content", isDark ? "#262a33" : "#e8ebf0");
+    themeToggle.setAttribute("aria-label", THEME_LABELS[theme]);
+    
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", THEME_COLORS[theme]);
+    }
+    
     try {
       localStorage.setItem("calc-theme", theme);
     } catch (_) {}
@@ -303,7 +321,7 @@
       saved = localStorage.getItem("calc-theme");
     } catch (_) {}
 
-    if (saved === "light" || saved === "dark") {
+    if (THEMES.includes(saved)) {
       setTheme(saved);
     } else if (
       window.matchMedia &&
@@ -316,11 +334,11 @@
   }
 
   themeToggle.addEventListener("click", function () {
-    const next =
-      document.documentElement.getAttribute("data-theme") === "dark"
-        ? "light"
-        : "dark";
-    setTheme(next);
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    const currentIndex = THEMES.indexOf(current);
+    const nextIndex = (currentIndex + 1) % THEMES.length;
+    const nextTheme = THEMES[nextIndex];
+    setTheme(nextTheme);
   });
 
   initTheme();
