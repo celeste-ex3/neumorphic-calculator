@@ -70,8 +70,8 @@ No installation needed. Just clone the repo and open `index.html` in your browse
 ```bash
 git clone https://github.com/celeste-ex3/neumorphic-calculator.git
 cd neumorphic-calculator
-open index.html
 ```
+open `index.html`
 
 ## Contact
 
