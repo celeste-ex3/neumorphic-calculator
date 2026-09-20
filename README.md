@@ -51,17 +51,17 @@ Glassmorphism with animated gradients and a purple/pink palette
  
 <img width="1920" height="905" alt="Screenshot 2026-09-20 at 13-18-40 Lumina Calculator - Premium Edition" src="https://github.com/user-attachments/assets/45d37828-454c-4797-a920-f8279b3fb217" />
 
-## Light Theme
+### Light Theme
 Soft neumorphic light grey with blue accents
 
 <img width="1920" height="901" alt="Screenshot 2026-09-20 at 13-41-53 Lumina Calculator - Premium Edition" src="https://github.com/user-attachments/assets/23cd29ae-1466-4dab-a60e-3ffd7aa0f472" />
 
-## Dark Theme
+### Dark Theme
 Deep charcoal with lighter neumorphic shadows
 
 <img width="1920" height="901" alt="Screenshot 2026-09-20 at 13-41-58 Lumina Calculator - Premium Edition" src="https://github.com/user-attachments/assets/d97b040b-9394-4ac5-a7cc-bf6f2b23548e" />
 
-Click the theme toggle button in the top right corner to cycle through them. Your choice is saved and restored on your next visit.
+**Click the theme toggle button in the top right corner to cycle through them. Your choice is saved and restored on your next visit.**
 
 
 ## Installation
