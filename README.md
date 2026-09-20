@@ -72,3 +72,9 @@ No installation needed. Just clone the repo and open `index.html` in your browse
 git clone https://github.com/celeste-ex3/neumorphic-calculator.git
 cd neumorphic-calculator
 open index.html
+```
+
+## Contact
+
+- GitHub: [@celeste-ex3](https://github.com/celeste-ex3)
+- LinkedIn: [Safyan Khan](https://www.linkedin.com/in/safyankhan/)
